@@ -1,0 +1,129 @@
+<style>
+  /* Grid Layout: 
+     - 1 column on mobile
+     - 2 columns on tablets
+     - 4 columns on desktop 
+     - No external Bootstrap required (Theme Safe)
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .starter-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .starter-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Button Styling */
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529; /* Dark background to match dark mode */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+</style>
+
+<h3 class="mb-4">ANIMATION</h3>
+<div class="starter-grid">
+  
+      <button class="video-btn" data-video-id="ppVdB0-isto">
+    <img src="https://img.youtube.com/vi/ppVdB0-isto/maxresdefault.jpg" alt="Calico! Ep. 4">
+    <div><h5>Calico! Ep. 4 <br>[voice actor]</h5></div>
+  </button>
+  
+            <button class="video-btn" data-video-id="ve6XfSHKmhs">
+    <img src="https://img.youtube.com/vi/ve6XfSHKmhs/maxresdefault.jpg" alt="Aron or Kogan Cartoon Pilot">
+    <div><h5> Prologue - PMD: Eternal Skies <br>[voice actor]</h5></div>
+  </button>
+  
+  
+          <button class="video-btn" data-video-id="vc0hor_mYWk">
+    <img src="https://img.youtube.com/vi/vc0hor_mYWk/maxresdefault.jpg" alt="Aron or Kogan Cartoon Pilot">
+    <div><h5>Aron or Kogan <br>[producer & artist]</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="iySqE8Nzrnw">
+    <img src="https://img.youtube.com/vi/iySqE8Nzrnw/maxresdefault.jpg" alt="Crumbs: Proof of concept animatic">
+    <div><h5>Crumbs <br>[voice actor]</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="_F9Z52z1034">
+    <img src="https://img.youtube.com/vi/_F9Z52z1034/maxresdefault.jpg" alt="Mosi Monsters! EP 3">
+    <div><h5>Mosi Monsters! EP 3 <br>[voice actor]</h5></div>
+  </button>
+  
+          <button class="video-btn" data-video-id="BjHzUAN9ctE">
+    <img src="https://img.youtube.com/vi/BjHzUAN9ctE/maxresdefault.jpg" alt="Group 5- MIKE">
+    <div><h5>Group 5 - MIKE <br>[voice actor]</h5></div>
+  </button>
+  
+      <button class="video-btn" data-video-id="X9qF86sDpLQ">
+    <img src="https://img.youtube.com/vi/X9qF86sDpLQ/maxresdefault.jpg" alt="The King of Heck">
+    <div><h5>The King of Heck <br>[voice actor]</h5></div>
+  </button>
+    
+        <button class="video-btn" data-video-id="US2sqyJ_VLE">
+    <img src="https://img.youtube.com/vi/US2sqyJ_VLE/maxresdefault.jpg" alt="The King of Heck">
+    <div><h5>Slime Time Live <br>[graphics & editing]</h5></div>
+  </button>	
+	
+        <button class="video-btn" data-video-id="gBfUfAOSYHU">
+    <img src="https://img.youtube.com/vi/gBfUfAOSYHU/maxresdefault.jpg" alt="The King of Heck">
+    <div><h5>Rave & Matt in Assassin's Creed <br>[editor]</h5></div>
+  </button>		
+	
+      <button class="video-btn" data-video-id="aFQO2m88BsQ">
+    <img src="https://img.youtube.com/vi/aFQO2m88BsQ/hqdefault.jpg" alt="Violence Over Sex">
+    <div><h5>Violence Over Sex <br>[voice actor] </h5></div>
+  </button>
+  
+    <button class="video-btn" data-video-id="cvxsKw6Ne80">
+    <img src="https://img.youtube.com/vi/cvxsKw6Ne80/maxresdefault.jpg" alt="Down in the Intel Room">
+    <div><h5>Down in the Intel Room <br>[animator] </h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="UmJ1Sd3vV7w">
+    <img src="https://img.youtube.com/vi/UmJ1Sd3vV7w/hqdefault.jpg" alt="Fly God">
+    <div><h5>LoSG: Fly-Guy's Christmas Play <br>[voice actor]</h5></div>
+  </button>
+  
+      <button class="video-btn" data-video-id="C57apj2k7Lo">
+    <img src="https://img.youtube.com/vi/C57apj2k7Lo/hqdefault.jpg" alt="Fly God">
+    <div><h5>LoSG: "Fly-God" <br>[voice actor]</h5></div>
+  </button>
+
+</div>

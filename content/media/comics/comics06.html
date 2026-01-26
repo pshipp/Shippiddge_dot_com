@@ -1,0 +1,361 @@
+<style>
+  /* THUMBNAIL GRID */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  /* SCROLLABLE STRIP for large collections */
+  .starter-grid.scrollable {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-template-columns: none;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  .starter-grid.scrollable .img-btn {
+    flex: 0 0 120px;
+    width: 120px;
+  }
+
+  /* Custom scrollbar styling */
+  .starter-grid.scrollable::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">Misc. Sprite Comics (2005-2007)</h3>
+
+<div class="starter-grid scrollable" data-section="Misc. Sprite Comics">
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/All Your Base Sonic Logic.png" 
+          data-caption="All Your Base - Sonic Logic (September 2005)">
+    <img src="/images/comics/misc_sprite_comics/All Your Base Sonic Logic.png" >
+    <div><h5> All Your Base </h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/XXX.png" 
+          data-caption="XXX Link (September 2005)">
+    <img src="/images/comics/misc_sprite_comics/XXX.png" >
+    <div><h5>XXX</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/mikesundoing.png" 
+          data-caption="Mike's Undoing (September 2005)">
+    <img src="/images/comics/misc_sprite_comics/mikesundoing.png" >
+    <div><h5>Mike's Undoing</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Moose at large.png" 
+          data-caption="Moose at Large (November 2005)">
+    <img src="/images/comics/misc_sprite_comics/Moose at large.png" >
+    <div><h5>Moose at Large</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Trav vs. Metal trv.png" 
+          data-caption="Trav vs. Metal Trav (November 2005)">
+    <img src="/images/comics/misc_sprite_comics/Trav vs. Metal trv.png" >
+    <div><h5>Trav vs. Metal Trav</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Dylansidea.png" 
+          data-caption="Dylan's Idea (November 2005)">
+    <img src="/images/comics/misc_sprite_comics/Dylansidea.png" >
+    <div><h5>Dylan's Idea</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Andrewsthanksgiving.png" 
+          data-caption="Andrew's Thanksgiving (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Andrewsthanksgiving.png" >
+    <div><h5>Andrew's Thanksgiving</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Betrayal of Keith.png" 
+          data-caption="Betrayal of Keith (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Betrayal of Keith.png" >
+    <div><h5>Betrayal of Keith</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Fun with Flying.png" 
+          data-caption="Fun with Flying (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Fun with Flying.png" >
+    <div><h5>Fun with Flying</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Vote 2 See.png" 
+          data-caption="Vote 2 See - Webcomic Ranking 'Thank You' Screen (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Vote 2 See.png" >
+    <div><h5>Vote 2 See</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Fcgets owned.png" 
+          data-caption="Forest Chan Gets Owned (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Fcgets owned.png" >
+    <div><h5>Forest Chan Gets Owned</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Christmas special.png" 
+          data-caption="Christmas Special (December 2005)">
+    <img src="/images/comics/misc_sprite_comics/Christmas special.png" >
+    <div><h5>Christmas Special</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Pop goes the robot.png" 
+          data-caption="Pop Goes the Robot (January 2006)">
+    <img src="/images/comics/misc_sprite_comics/Pop goes the robot.png" >
+    <div><h5>Pop Goes the Robot</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/BP004.png" 
+          data-caption="'The Blank Pages' Guest Comic #4 (January 2006)">
+    <img src="/images/comics/misc_sprite_comics/BP004.png" >
+    <div><h5>'The Blank Pages' #4</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/comic4rapter.png" 
+          data-caption="Comic for Rapter (January 2006)">
+    <img src="/images/comics/misc_sprite_comics/comic4rapter.png" >
+    <div><h5>Comic for Rapter</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/BP008.png" 
+          data-caption="'The Blank Pages' Guest Comic #8 (January 2006)">
+    <img src="/images/comics/misc_sprite_comics/BP008.png" >
+    <div><h5>'The Blank Pages' #8</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Mime With Paul.gif" 
+          data-caption="Mime With Paul (February 2006)">
+    <img src="/images/comics/misc_sprite_comics/Mime With Paul.gif" >
+    <div><h5>Mime With Paul</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Sonic Riders.png" 
+          data-caption="Sonic Riders (February 2006)">
+    <img src="/images/comics/misc_sprite_comics/Sonic Riders.png" >
+    <div><h5>Sonic Riders</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/phyrgrin battle.png" 
+          data-caption="phyrgrin battle (March 2006)">
+    <img src="/images/comics/misc_sprite_comics/phyrgrin battle.png" >
+    <div><h5>phyrgrin battle</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/iWeasel.png" 
+          data-caption="iWeasel (April 2006)">
+    <img src="/images/comics/misc_sprite_comics/iWeasel.png" >
+    <div><h5>iWeasel</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/draco dragon.png" 
+          data-caption="DracotheDragon the Dragon (April 2006)">
+    <img src="/images/comics/misc_sprite_comics/draco dragon.png" >
+    <div><h5>DracotheDragon</h5></div>
+  </button>  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/drinking problem.png" 
+          data-caption="Dirinking Problem (April 2006)">
+    <img src="/images/comics/misc_sprite_comics/drinking problem.png" >
+    <div><h5>Drinking Problem</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/theliesbehindtruth.bmp" 
+          data-caption="The Lies Behind the Truth (May 2006)">
+    <img src="/images/comics/misc_sprite_comics/theliesbehindtruth.bmp" >
+    <div><h5>The Lies Behind the Truth</h5></div>
+  </button>  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Eacuiting.png" 
+          data-caption="Eacuiting (May 2006)">
+    <img src="/images/comics/misc_sprite_comics/Eacuiting.png" >
+    <div><h5>Eacuiting</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Chao Care.png" 
+          data-caption="Chao Care (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Chao Care.png" >
+    <div><h5>Chao Care</h5></div>
+  </button>  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Qwert on Mikey.png" 
+          data-caption="Qwert on Mikey (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Qwert on Mikey.png" >
+    <div><h5>Qwert on Mikey</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Comicles Fancomic by Shippiddge.png" 
+          data-caption="Comicles Fancomic by Shippiddge (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Comicles Fancomic by Shippiddge.png" >
+    <div><h5>Comicles Fancomic</h5></div>
+  </button>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Mikey Random Quote.png" 
+          data-caption="Mikey Random Quote (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Mikey Random Quote.png" >
+    <div><h5>Mikey Random Quote</h5></div>
+	
+	    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Mikey Random Quote 2.png" 
+          data-caption="Mikey Random Quote 2 (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Mikey Random Quote 2.png" >
+    <div><h5>Mikey Random Quote 2</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Brads War.png" 
+          data-caption="Brad's War (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/Brads War.png" >
+    <div><h5>Brad's War</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/gtfo.png" 
+          data-caption="gtfo (June 2006)">
+    <img src="/images/comics/misc_sprite_comics/gtfo.png" >
+    <div><h5>gtfo</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Lost Translation.png" 
+          data-caption="Lost Translation (July 2006)">
+    <img src="/images/comics/misc_sprite_comics/Lost Translation.png" >
+    <div><h5>Lost Translation</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/OMG! Cholesterol.png" 
+          data-caption="OMG! Cholesterol (July 2006)">
+    <img src="/images/comics/misc_sprite_comics/OMG! Cholesterol.png" >
+    <div><h5>OMG! Cholesterol</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Iblis Trigger.png" 
+          data-caption="Iblis Trigger (July 2006)">
+    <img src="/images/comics/misc_sprite_comics/Iblis Trigger.png" >
+    <div><h5>Iblis Trigger</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/beginnerspritecomic.jpg" 
+          data-caption="Beginner Sprite Comic (July 2006)">
+    <img src="/images/comics/misc_sprite_comics/beginnerspritecomic.jpg" >
+    <div><h5>Beginner Sprite Comic</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Medical Condition.png" 
+          data-caption="Medical Condition (August 2006)">
+    <img src="/images/comics/misc_sprite_comics/Medical Condition.png" >
+    <div><h5>Medical Condition</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/Paper Mario Addiction.png" 
+          data-caption="Paper Mario Addiction (August 2006)">
+    <img src="/images/comics/misc_sprite_comics/Paper Mario Addiction.png" >
+    <div><h5>Paper Mario Addiction</h5></div>
+    
+    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/dc_bday.png" 
+          data-caption="DC's Birthday (December 2006)">
+    <img src="/images/comics/misc_sprite_comics/dc_bday.png" >
+    <div><h5>DC's Birthday</h5></div>
+	
+	    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/archiebday.png" 
+          data-caption="Archie's Birthday (February 2007)">
+    <img src="/images/comics/misc_sprite_comics/archiebday.png" >
+    <div><h5>Archie's Birthday</h5></div>
+	
+	    <button class="img-btn" 
+          data-full-src="/images/comics/misc_sprite_comics/comicles 200.png" 
+          data-caption="Comicles #200 (May 2007)">
+    <img src="/images/comics/misc_sprite_comics/comicles 200.png" >
+    <div><h5>Comicles #200</h5></div>
+	

@@ -1,0 +1,158 @@
+<style>
+  /* THUMBNAIL GRID */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  /* SCROLLABLE STRIP for large collections */
+  .starter-grid.scrollable {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-template-columns: none;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  .starter-grid.scrollable .img-btn {
+    flex: 0 0 120px;
+    width: 120px;
+  }
+
+  /* Custom scrollbar styling */
+  .starter-grid.scrollable::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">Misc. Digital Comics (2006-2008)</h3>
+
+<div class="starter-grid scrollable" data-section="Misc. Sprite Comics">
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/drawn/O rly B-rad.png" 
+          data-caption="O Rly B-rad? (October 2006)">
+    <img src="/images/comics/drawn/O rly B-rad.png" >
+    <div><h5>O Rly B-rad?</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/drawn/b button.png" 
+          data-caption="B Button (May 2007)">
+    <img src="/images/comics/drawn/b button.png" >
+    <div><h5>B Button</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/drawn/delicious cake.png" 
+          data-caption="Delicious Cake (January 2008)">
+    <img src="/images/comics/drawn/delicious cake.png" >
+    <div><h5>Delicious Cake</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/drawn/cake shipp.png" 
+          data-caption="Cake Mixed (February 2008)">
+    <img src="/images/comics/drawn/cake shipp.png" >
+    <div><h5>Cake Mixed</h5></div>
+  </button>
+  
+  
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Generate buttons for each grid
+  document.querySelectorAll('[data-folder]').forEach(grid => {
+    const folder = grid.getAttribute('data-folder');
+    const prefix = grid.getAttribute('data-prefix');
+    const start = parseInt(grid.getAttribute('data-start'));
+    const end = parseInt(grid.getAttribute('data-end'));
+    const title = grid.getAttribute('data-title');
+    const caption = grid.getAttribute('data-caption');
+    
+    for (let i = start; i <= end; i++) {
+      const num = String(i).padStart(3, '0');
+      const filename = `${prefix}${num}.png`;
+      const imagePath = `/images/comics/${folder}/${filename}`;
+      
+      const button = document.createElement('button');
+      button.className = 'img-btn';
+      button.setAttribute('data-full-src', imagePath);
+      button.setAttribute('data-caption', caption);
+      
+      button.innerHTML = `
+        <img src="${imagePath}">
+        <div><h5>${title} ${i}</h5></div>
+      `;
+      
+      grid.appendChild(button);
+    }
+  });
+});
+</script>

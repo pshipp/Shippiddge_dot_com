@@ -1,0 +1,119 @@
+<style>
+  /* Theme-safe grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-container { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">PROMOS</h3>
+<div class="grid-container">
+  
+  <button class="video-btn" data-video-id="xzJWmVlFFCE">
+    <img src="https://img.youtube.com/vi/xzJWmVlFFCE/maxresdefault.jpg" alt="Return">
+    <div><h5>Starter Squad Returns (2015)</h5></div>
+  </button>
+
+  <button class="video-btn" data-video-id="g9uITfCmXmQ">
+    <img src="https://img.youtube.com/vi/g9uITfCmXmQ/maxresdefault.jpg" alt="Ep6 Teaser">
+    <div><h5>Episode 6 Teaser</h5></div>
+  </button>
+  <button class="video-btn" data-video-id="2B3cuxEkaA8">
+    <img src="https://img.youtube.com/vi/2B3cuxEkaA8/maxresdefault.jpg" alt="Squad Shirts">
+    <div><h5>Starter Squad Shirts (2015)</h5></div>
+
+
+  <button class="video-btn" data-video-id="sQYeyumPwls">
+    <img src="https://img.youtube.com/vi/sQYeyumPwls/maxresdefault.jpg" alt="Patreon">
+    <div><h5>Patreon Promo</h5></div>
+  </button>
+
+  </button>
+  <button class="video-btn" data-video-id="tWzejmN2t70">
+    <img src="https://img.youtube.com/vi/tWzejmN2t70/maxresdefault.jpg" alt="Ep7 Teaser">
+    <div><h5>Episode 7 Teaser</h5></div>
+  </button>
+  
+  <button class="video-btn" data-video-id="g23JW7uMFWQ">
+    <img src="https://img.youtube.com/vi/g23JW7uMFWQ/maxresdefault.jpg" alt="Ep 9 Teaser">
+    <div><h5>Episode 9 Teaser</h5></div>
+  </button>
+
+  <button class="video-btn" data-video-id="99Kb7dbW25M">
+    <img src="https://img.youtube.com/vi/99Kb7dbW25M/maxresdefault.jpg" alt="Ep 9 Trailer">
+    <div><h5>Episode 9 Trailer</h5></div>
+  </button>
+
+  <button class="video-btn" data-video-id="XpeQlAVoQbY">
+    <img src="https://img.youtube.com/vi/XpeQlAVoQbY/maxresdefault.jpg" alt="Ep 10 Teaser">
+    <div><h5>Episode 10 Teaser</h5></div>
+  </button>
+
+  <button class="video-btn" data-video-id="rY1Xt9sfn10">
+    <img src="https://img.youtube.com/vi/rY1Xt9sfn10/maxresdefault.jpg" alt="Ep 11 Teaser">
+    <div><h5>Episode 11 Teaser</h5></div>
+  </button>
+
+</div>
+
+<script>
+  document.querySelectorAll('.video-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const videoId = this.getAttribute('data-video-id');
+      const iframe = document.getElementById('mainVideo');
+      
+      // Change the video source
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      
+      // Smooth scroll back to the big player
+      document.getElementById('bigPlayer').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    });
+  });
+</script>

@@ -1,0 +1,95 @@
+<style>
+  /* Grid Layout: 
+     - 1 column on mobile
+     - 2 columns on tablets
+     - 4 columns on desktop 
+     - No external Bootstrap required (Theme Safe)
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .starter-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .starter-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Button Styling */
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529; /* Dark background to match dark mode */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+</style>
+
+<h3 class="mb-4">PERFORMANCES</h3>
+<div class="starter-grid">
+  
+      <button class="video-btn" data-video-id="sxzSYkOGYcc">
+    <img src="https://img.youtube.com/vi/sxzSYkOGYcc/maxresdefault.jpg" alt="Stand-up 2017">
+    <div><h5>Stand-up Comedy Performance 02/18/17</h5></div>
+  </button>
+
+      <button class="video-btn" data-video-id="yIzJ1asDCRg">
+    <img src="https://img.youtube.com/vi/yIzJ1asDCRg/maxresdefault.jpg" alt="Halloween 2017">
+    <div><h5>Halloween 2017</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="ZtHrdEfC1DM">
+    <img src="https://img.youtube.com/vi/ZtHrdEfC1DM/maxresdefault.jpg" alt="Halloween 2016">
+    <div><h5>Halloween 2016 - Clown!</h5></div>
+	
+		        <button class="video-btn" data-video-id="7jbN7dHJYvY">
+    <img src="https://img.youtube.com/vi/7jbN7dHJYvY/maxresdefault.jpg" alt="Halloween 2016">
+    <div><h5>Message for Lyle (2016) [language warning]</h5></div>
+  </button>
+
+
+
+	        <button class="video-btn" data-video-id="U_DX2RaILsE">
+    <img src="https://img.youtube.com/vi/U_DX2RaILsE/maxresdefault.jpg" alt="Halloween 2016">
+    <div><h5>Outside (2016)</h5></div>
+  </button>
+
+	        <button class="video-btn" data-video-id="E9u5A860UZc">
+    <img src="https://img.youtube.com/vi/E9u5A860UZc/maxresdefault.jpg" alt="Halloween 2016">
+    <div><h5>Security Cameras (2016)</h5></div>
+  </button>
+
+</div>

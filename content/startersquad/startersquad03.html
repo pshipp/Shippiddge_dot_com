@@ -1,0 +1,84 @@
+<style>
+  /* Theme-safe grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-container { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">EPISODES LEFT</h3>
+<div class="grid-container">
+  
+  <button class="video-btn" data-video-id="6cqhMV1iOm0">
+    <img src="https://img.youtube.com/vi/6cqhMV1iOm0/maxresdefault.jpg" alt="3 Episodes Left">
+    <div><h5>3 Episodes Left</h5></div>
+  </button>
+
+  <button class="video-btn" data-video-id="mraoOYZnWnY">
+    <img src="https://img.youtube.com/vi/mraoOYZnWnY/maxresdefault.jpg" alt="2 Episodes Left">
+    <div><h5>2 Episodes Left</h5></div>
+  </button>
+
+</div>
+
+<script>
+  document.querySelectorAll('.video-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const videoId = this.getAttribute('data-video-id');
+      const iframe = document.getElementById('mainVideo');
+      
+      // Change the video source
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      
+      // Smooth scroll back to the big player
+      document.getElementById('bigPlayer').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    });
+  });
+</script>

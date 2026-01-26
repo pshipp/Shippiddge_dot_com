@@ -1,0 +1,258 @@
+<style>
+  /* THUMBNAIL GRID */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  /* SCROLLABLE STRIP for large collections */
+  .starter-grid.scrollable {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-template-columns: none;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  .starter-grid.scrollable .img-btn {
+    flex: 0 0 120px;
+    width: 120px;
+  }
+
+  /* Custom scrollbar styling */
+  .starter-grid.scrollable::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">Sketchbook Comics (2015)</h3>
+<div class="starter-grid scrollable" data-section="Sketchbook Comics (2015)">
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_01.jpeg" 
+          data-caption="Comics! - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_01.jpeg">
+    <div><h5>Comics!</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_02.jpeg" 
+          data-caption="Watermelon Monster - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_02.jpeg">
+    <div><h5>Watermelon Monster</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_03.jpeg" 
+          data-caption="Napkins - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_03.jpeg">
+    <div><h5>Napkins</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_04.jpeg" 
+          data-caption="Penno - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_04.jpeg">
+    <div><h5>Penno</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_05.jpeg" 
+          data-caption="Today - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_05.jpeg">
+    <div><h5>Today</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_06.jpeg" 
+          data-caption="Airplane - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_06.jpeg">
+    <div><h5>Airplane</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_07.jpeg" 
+          data-caption="Computer - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_07.jpeg">
+    <div><h5>Computer</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_08.jpeg" 
+          data-caption="Demands - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_08.jpeg">
+    <div><h5>Demands</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_09.jpeg" 
+          data-caption="Life - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_09.jpeg">
+    <div><h5>Life</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_10.jpeg" 
+          data-caption="Things - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_10.jpeg">
+    <div><h5>Things</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_11.jpeg" 
+          data-caption="Chair-O - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_11.jpeg">
+    <div><h5>Chair-O</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_12.jpeg" 
+          data-caption="Scrambled Eggs - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_12.jpeg">
+    <div><h5>Scrambled Eggs</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_13.jpeg" 
+          data-caption="Smart - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_13.jpeg">
+    <div><h5>Smart</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_14.jpeg" 
+          data-caption="Interesting - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_14.jpeg">
+    <div><h5>Interesting</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_15.jpeg" 
+          data-caption="Creativity - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_15.jpeg">
+    <div><h5>Creativity</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_16.jpeg" 
+          data-caption="Forced - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_16.jpeg">
+    <div><h5>Forced</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_17.jpeg" 
+          data-caption="Good Idea - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_17.jpeg">
+    <div><h5>Good Idea</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_18.jpeg" 
+          data-caption="Reflection - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_18.jpeg">
+    <div><h5>Reflection</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_19.jpeg" 
+          data-caption="Cashier - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_19.jpeg">
+    <div><h5>Cashier</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_20.jpeg" 
+          data-caption="Sharing - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_20.jpeg">
+    <div><h5>Sharing</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_21.jpeg" 
+          data-caption="Bitching - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_21.jpeg">
+    <div><h5>Bitching</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_22.jpeg" 
+          data-caption="Pain Cubes - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_22.jpeg">
+    <div><h5>Pain Cubes</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/comics/sketchcomics/sk2015comics_23.jpeg" 
+          data-caption="Seventeen Dollar Ice Cream - Sketchbook Comics (2015)">
+    <img src="/images/comics/sketchcomics/sk2015comics_23.jpeg">
+    <div><h5>Seventeen Dollar Ice Cream</h5></div>
+  </button>
+  
+</div>

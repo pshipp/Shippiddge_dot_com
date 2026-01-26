@@ -1,0 +1,160 @@
+<style>
+  /* THUMBNAIL GRID 
+     - "repeat(auto-fill...)" creates as many columns as possible.
+     - "minmax(120px, 1fr)" means buttons will be at least 120px wide, 
+       but will stretch to fill gaps.
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem; /* Tight gap for a gallery look */
+    margin-top: 2rem;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces the button to be a perfect square */
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; /* Needed for text overlay */
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2; /* Brings it above neighbors on hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  /* MAGIC CROP: This makes any image size fit the square */
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  /* TEXT OVERLAY (Optional)
+     This hides the text by default and shows it only when you hover,
+     keeping the square look clean.
+  */
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    opacity: 0; /* Invisible by default */
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  /* Show text on hover */
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem; /* Smaller text for thumbnails */
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">PAINTINGS</h3>
+<div class="starter-grid">
+  
+  <button class="img-btn" 
+          data-full-src="/images/art/tacoBen.png" 
+          data-caption="Taco Ben (2017) - Oil on canvas">
+    <img src="/images/art/tacoBen.png" >
+    <div><h5>Taco Ben</h5></div>
+  </button>
+
+  <button class="img-btn" 
+          data-full-src="/images/art/mcDonalds.png" 
+          data-caption="mcDonalds (2022) - Acrylic on canvas">
+    <img src="/images/art/mcDonalds.png" >
+    <div><h5>mcDonalds</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/art/cagedBear.png" 
+          data-caption="Caged Bear (2022) - Acrylic on canvas">
+    <img src="/images/art/cagedBear.png" >
+    <div><h5>Caged Bear</h5></div>
+  </button>
+  
+    
+    <button class="img-btn" 
+          data-full-src="/images/art/heartBeatemup.png" 
+          data-caption="Heart Beatemup (2022) - Acrylic on canvas">
+    <img src="/images/art/heartBeatemup.png" >
+    <div><h5>Heart Beatemup</h5></div>
+  </button>
+ 
+
+    <button class="img-btn" 
+          data-full-src="/images/art/Unrequited.jpeg" 
+          data-caption="Unrequited (2022) - Acrylic on canvas">
+    <img src="/images/art/Unrequited.jpeg" >
+    <div><h5>Unrequited</h5></div>
+  </button>
+   
+   
+    <button class="img-btn" 
+          data-full-src="/images/art/Hummingbird.jpeg" 
+          data-caption="Hummingbird (2022) - Acrylic on canvas">
+    <img src="/images/art/Hummingbird.jpeg" >
+    <div><h5>Hummingbird</h5></div>
+  </button>
+  
+  
+	<button class="img-btn" 
+          data-full-src="/images/art/Tanooki.jpeg" 
+          data-caption="Tanooki (2022) - Acrylic on canvas">
+    <img src="/images/art/Tanooki.jpeg" >
+    <div><h5>Tanooki</h5></div>
+  </button>
+   
+     
+      <button class="img-btn" 
+          data-full-src="/images/art/sunflower.png" 
+          data-caption="Sunflower (2022) - Acrylic on canvas">
+    <img src="/images/art/sunflower.png" >
+    <div><h5>Sunflower</h5></div>
+  </button>
+  
+    <button class="img-btn" 
+          data-full-src="/images/art/banana.png" 
+          data-caption="Banana (2022) - Acrylic on canvas">
+    <img src="/images/art/banana.png" >
+    <div><h5>Banana</h5></div>
+  </button>
+  
+      <button class="img-btn" 
+          data-full-src="/images/art/Bearface.jpeg" 
+          data-caption="Bear Face (2022) - Acrylic on canvas">
+    <img src="/images/art/Bearface.jpeg" >
+    <div><h5>Bear Face</h5></div>
+  </button>  
+  
+      <button class="img-btn" 
+          data-full-src="/images/art/Octopus.jpeg" 
+          data-caption="Octopus (2022) - Acrylic on canvas">
+    <img src="/images/art/Octopus.jpeg" >
+    <div><h5>Octopus</h5></div>
+  </button>
+     
+      <button class="img-btn" 
+          data-full-src="/images/art/Heaven.jpeg" 
+          data-caption="Heaven (2022) - Oil & Acrylic on canvas">
+    <img src="/images/art/Heaven.jpeg" >
+    <div><h5>Heaven</h5></div>
+  </button>
+   

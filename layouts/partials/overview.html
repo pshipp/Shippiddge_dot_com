@@ -1,0 +1,35 @@
+{{ define "overview" }}
+
+<div class="flex-shrink-0 col-12 col-md-10 mt-5 mb-md-0">
+  <div style="text-align:center">
+    <h3 class="mt-5 mb-3" style="font-family: 'Lucida Console'">STARTER SQUAD EP.12 PROGRESS:</h3>
+  </div>
+  <p class="mb-5" id="status-bar">Loading...</p>
+  
+  <h3 class="mt-5 mb-3" style="font-family: 'Lucida Console'">> STATUS:</h3>
+  <p class="mb-5" id="status-update">Loading...</p>
+
+  <h3 class="mt-5 mb-3" style="font-family: 'Lucida Console'">> UPCOMING LIVE STREAM:</h3>
+  <div id="stream-schedule" style="font-family: 'Arial'; white-space: pre-wrap; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; max-width: 700px; margin: 1rem auto; min-height: 2em; text-align:center">
+  Loading schedule...
+</div>
+
+  <script>
+    // Single fetch for all data
+    fetch('https://status-update.pierceshipp.workers.dev/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('status-bar').innerHTML = data.statusBar;
+        document.getElementById('status-update').innerHTML = data.statusUpdate;
+        document.getElementById('stream-schedule').innerHTML = data.streamSchedule;
+      })
+      .catch(error => {
+        document.getElementById('status-bar').textContent = 'Unable to load.';
+        document.getElementById('status-update').textContent = 'Unable to load.';
+        document.getElementById('stream-schedule').textContent = 'Unable to load.';
+        console.error('Error fetching data:', error);
+      });
+  </script>
+</div>
+
+{{ end }}

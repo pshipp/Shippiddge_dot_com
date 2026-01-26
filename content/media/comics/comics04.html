@@ -1,0 +1,127 @@
+<style>
+  /* THUMBNAIL GRID */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  /* SCROLLABLE STRIP for large collections */
+  .starter-grid.scrollable {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-template-columns: none;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  .starter-grid.scrollable .img-btn {
+    flex: 0 0 120px;
+    width: 120px;
+  }
+
+  /* Custom scrollbar styling */
+  .starter-grid.scrollable::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  .starter-grid.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">CFC vs CMD Forums (2009)</h3> Interactive comics where forum users decide what happens next.  The accompanying text and forum posts have now been lost to time, so what's being communicated is now left to the imaginiation.  I've also censored some of the more obscene bits.
+
+<div class="starter-grid scrollable" data-section="CFC vs CMD #1" 
+     data-folder="cfc_cmd_01" 
+     data-prefix="abse" 
+     data-start="1" 
+     data-end="5" 
+     data-title="shipp.exe"
+     data-caption="CFC vs CMD - shipp.exe"></div>
+
+<div class="starter-grid scrollable" data-section="CFC vs CMD #2" 
+     data-folder="cfc_cmd_02" 
+     data-prefix="ftp" 
+     data-start="1" 
+     data-end="20" 
+     data-title="Infiltration"
+     data-caption="CFC vs CMD - Infiltration"></div>
+
+<div class="starter-grid scrollable" data-section="CFC vs CMD #3" 
+     data-folder="cfc_cmd_03" 
+     data-prefix="zeb world " 
+     data-start="1" 
+     data-end="59" 
+     data-title="Escape"
+     data-caption="CFC vs CMD - Escape"></div>
+
+<div class="starter-grid scrollable" data-section="CFC vs CMD #4" 
+     data-folder="cfc_cmd_04" 
+     data-prefix="trp" 
+     data-start="1" 
+     data-end="42" 
+     data-title="Superhero"
+     data-caption="CFC vs CMD - Superhero"></div>
+

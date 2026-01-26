@@ -1,4 +1,50 @@
-baseURL = 'https://Shippiddge.com/'
+
 languageCode = 'en-us'
 title = 'Shippiddge dot com'
 theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pluralizeListTitles = false
+
+
+[params]
+  description = "Welcome to Shippiddge.com!"
+  email = "contact@shippiddge.com"
+  favicon = "/images/shipp112.png"
+  avatar = "/images/shipp_logo_400.png"
+  headerIcon = "/images/shipp112.png"
+  enableGitalk = true
+  enableSearch = true
+
+
+[[params.links]]
+title = "YouTube"
+href = "https://youtube.com/@shippiddge" 
+icon = "/images/youtube.png"
+
+[[params.links]]
+title = "Discord"
+href = "https://discord.com/invite/2S3g4wegsq" 
+icon = "/images/discord.png"
+
+[[params.links]]
+title = "Twitch"
+href = "https://www.twitch.tv/shippiddgetv" 
+icon = "/images/twitch.png"
+
+[[params.links]]
+title = "BlueSky"
+href = "https://bsky.app/profile/shippiddge.com" 
+icon = "/images/bsky.png"
+
+[[params.links]]
+title = "Twitter"
+href = "https://x.com/shippiddge" 
+icon = "/images/x.png"
+
+[[params.links]]
+title = "Facebook"
+href = "https://facebook.com/shippiddgeOfficial" 
+icon = "/images/facebook.png"
+
+

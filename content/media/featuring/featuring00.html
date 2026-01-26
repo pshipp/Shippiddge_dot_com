@@ -1,0 +1,171 @@
+ <h1 style="text-align:center"  style="font-family: 'Lucida Console'">FEATURING SHIPPIDDGE</h1>
+  <p class="mb-1"  style="text-align:center" >Various works that feature Shippiddge in the cast and/or crew.</a> </p>
+
+
+<!-- Big Video Player -->
+<div class="big-player-container my-5" id="bigPlayer">
+  <div class="ratio ratio-16x9">
+    <iframe id="mainVideo" 
+            src="https://www.youtube.com/embed/W5Yd8plNvoY"
+            title="Featured Video"
+            allowfullscreen
+            loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<!-- Navigation Controls - Centered -->
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem; margin-bottom: 1.5rem; gap: 1rem;">
+  <button id="prevBtn" class="nav-button btn" onclick="navigateVideo(-1)" style="padding: 10px 20px;">
+    ← Previous
+  </button>
+  
+  <div style="text-align: center; min-width: 200px;">
+    <span id="videoTitle" style="display: block; font-weight: 500;">Featured Video</span>
+    <div style="font-size: 0.875rem; margin-top: 0.25rem;">
+      <span id="videoCounter">1 / 1</span>
+    </div>
+  </div>
+  
+  <button id="nextBtn" class="nav-button btn" onclick="navigateVideo(1)" style="padding: 10px 20px;">
+    Next →
+  </button>
+</div>
+
+<!-- UNIFIED MASTER SCRIPT -->
+<script>
+  // Video playlist management
+  let videoPlaylist = [];
+  let currentVideoIndex = -1; // Start at -1 to indicate no video selected from playlist yet
+  const defaultVideoId = 'zgUFaThdFG8'; // The featured video ID
+  
+  // Play a specific video
+  function playVideo(videoId, platform, title) {
+    platform = platform || 'youtube';
+    const iframe = document.getElementById('mainVideo');
+    
+    let embedUrl;
+    if (platform === 'dtube') {
+      embedUrl = `https://play.d.tube?v=${videoId}`;
+    } else {
+      embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    }
+    
+    iframe.src = embedUrl;
+    
+    // Update video info if title is provided
+    if (title) {
+      document.getElementById('videoTitle').textContent = title;
+    }
+    
+    // Update navigation buttons
+    updateNavigationButtons();
+    
+    // Scroll to player
+    document.getElementById('bigPlayer').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+  
+  // Navigate between videos
+  function navigateVideo(direction) {
+    if (videoPlaylist.length === 0) return;
+    
+    // If we're on the default video (currentVideoIndex is -1), go to first or last
+    if (currentVideoIndex === -1) {
+      currentVideoIndex = direction > 0 ? 0 : videoPlaylist.length - 1;
+    } else {
+      currentVideoIndex += direction;
+      
+      // Wrap around
+      if (currentVideoIndex >= videoPlaylist.length) {
+        currentVideoIndex = 0;
+      } else if (currentVideoIndex < 0) {
+        currentVideoIndex = videoPlaylist.length - 1;
+      }
+    }
+    
+    const video = videoPlaylist[currentVideoIndex];
+    playVideo(video.id, video.platform, video.title);
+    
+    // Update active button
+    updateActiveButton();
+  }
+  
+  // Update navigation button states
+  function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const counter = document.getElementById('videoCounter');
+    
+    if (videoPlaylist.length <= 1) {
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+    } else {
+      prevBtn.disabled = false;
+      nextBtn.disabled = false;
+    }
+    
+    // Update counter - show actual position or "Featured" if on default video
+    if (currentVideoIndex === -1) {
+      counter.textContent = `Featured / ${videoPlaylist.length}`;
+    } else {
+      counter.textContent = `${currentVideoIndex + 1} / ${videoPlaylist.length}`;
+    }
+  }
+  
+  // Update active button highlight
+  function updateActiveButton() {
+    document.querySelectorAll('.video-btn').forEach((btn, index) => {
+      if (index === currentVideoIndex) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+  
+  // Initialize video buttons and build playlist
+  function initializeVideoButtons() {
+    const buttons = document.querySelectorAll('.video-btn');
+    videoPlaylist = [];
+    
+    buttons.forEach((btn, index) => {
+      const videoId = btn.getAttribute('data-video-id');
+      const platform = btn.getAttribute('data-platform') || 'youtube';
+      const title = btn.getAttribute('data-title') || btn.textContent.trim();
+      
+      videoPlaylist.push({ id: videoId, platform: platform, title: title });
+      
+      btn.addEventListener('click', function() {
+        currentVideoIndex = index;
+        playVideo(videoId, platform, title);
+        updateActiveButton();
+      });
+    });
+    
+    // Don't auto-select first video since we have a featured default
+    // Just update the navigation buttons
+    updateNavigationButtons();
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      navigateVideo(-1);
+    } else if (e.key === 'ArrowRight') {
+      navigateVideo(1);
+    }
+  });
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeVideoButtons);
+  } else {
+    initializeVideoButtons();
+  }
+  
+  // Re-initialize whenever new content is loaded
+  window.reinitVideoButtons = initializeVideoButtons;
+</script>

@@ -1,0 +1,73 @@
+<style>
+  /* Grid Layout: 
+     - 1 column on mobile
+     - 2 columns on tablets
+     - 4 columns on desktop 
+     - No external Bootstrap required (Theme Safe)
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .starter-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .starter-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Button Styling */
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529; /* Dark background to match dark mode */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+</style>
+
+<h3 class="mb-4">FANDUBS</h3>
+<div class="starter-grid">
+  
+      <button class="video-btn" data-video-id="SWJuiQKubWg">
+    <img src="https://img.youtube.com/vi/SWJuiQKubWg/maxresdefault.jpg" alt="How To Be A Soul Hunter 101">
+    <div><h5>How To Be A Soul Hunter 101 <br>[voice actor]</h5></div>
+  </button>
+
+
+
+
+</div>
+

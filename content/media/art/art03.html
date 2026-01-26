@@ -1,0 +1,137 @@
+<style>
+  /* THUMBNAIL GRID 
+     - "repeat(auto-fill...)" creates as many columns as possible.
+     - "minmax(120px, 1fr)" means buttons will be at least 120px wide, 
+       but will stretch to fill gaps.
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem; /* Tight gap for a gallery look */
+    margin-top: 2rem;
+  }
+
+  .img-btn {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces the button to be a perfect square */
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; /* Needed for text overlay */
+    background: #212529;
+    transition: transform 0.2s;
+  }
+
+  .img-btn:hover {
+    transform: scale(1.05);
+    z-index: 2; /* Brings it above neighbors on hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  /* MAGIC CROP: This makes any image size fit the square */
+  .img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  /* TEXT OVERLAY (Optional)
+     This hides the text by default and shows it only when you hover,
+     keeping the square look clean.
+  */
+  .img-btn div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    opacity: 0; /* Invisible by default */
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+
+  /* Show text on hover */
+  .img-btn:hover div {
+    opacity: 1;
+  }
+
+  .img-btn h5 {
+    margin: 0;
+    font-size: 0.8rem; /* Smaller text for thumbnails */
+    font-weight: 500;
+  }
+</style>
+
+<h3 class="mb-4">SKETCHBOOK</h3>
+<div class="starter-grid">
+  
+  
+  
+    <button class="img-btn" 
+          data-full-src="/images/art/032019.jpeg" 
+          data-caption="032019 (2019) - Pencil on Paper">
+    <img src="/images/art/032019.jpeg" >
+    <div><h5>032019</h5></div>
+  </button>
+  
+  
+      <button class="img-btn" 
+          data-full-src="/images/art/032619.jpeg" 
+          data-caption="032619 (2019) - Pencil on Paper">
+    <img src="/images/art/032619.jpeg" >
+    <div><h5>032619</h5></div>
+  </button>
+ 
+   
+      <button class="img-btn" 
+          data-full-src="/images/art/041419.jpeg" 
+          data-caption="041419 (2019) - Pencil on Paper">
+    <img src="/images/art/041419.jpeg" >
+    <div><h5>041419</h5></div>
+  </button>
+  
+        <button class="img-btn" 
+          data-full-src="/images/art/051019.jpeg" 
+          data-caption="051019 (2019) - Pencil on Paper">
+    <img src="/images/art/051019.jpeg" >
+    <div><h5>051019</h5></div>
+  </button>
+  
+          <button class="img-btn" 
+          data-full-src="/images/art/072820.jpeg" 
+          data-caption="072820 (2020) - Pen on Paper">
+    <img src="/images/art/072820.jpeg" >
+    <div><h5>072820</h5></div>
+  </button>
+  
+            <button class="img-btn" 
+          data-full-src="/images/art/090120.jpeg" 
+          data-caption="090120 (2020) - Pen on Paper">
+    <img src="/images/art/090120.jpeg" >
+    <div><h5>090120</h5></div>
+  </button>
+  
+  <button class="img-btn" 
+          data-full-src="/images/art/022121.png" 
+          data-caption="022121 (2021) - Digital">
+    <img src="/images/art/022121.png" >
+    <div><h5>022121</h5></div>
+  </button>
+
+  <button class="img-btn" 
+          data-full-src="/images/art/102324.png" 
+          data-caption="102324 (2024) - Digital">
+    <img src="/images/art/102324.png" >
+    <div><h5>102324</h5></div>
+  </button>
+
+  <button class="img-btn" 
+          data-full-src="/images/art/110324.png" 
+          data-caption="110324 (2024) - Digital">
+    <img src="/images/art/110324.png" >
+    <div><h5>110324</h5></div>
+  </button>
