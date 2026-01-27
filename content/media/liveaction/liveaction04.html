@@ -1,0 +1,120 @@
+<style>
+  /* Grid Layout: 
+     - 1 column on mobile
+     - 2 columns on tablets
+     - 4 columns on desktop 
+     - No external Bootstrap required (Theme Safe)
+  */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .starter-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .starter-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Button Styling */
+  .video-btn {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212529; /* Dark background to match dark mode */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .video-btn img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .video-btn div {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+  }
+
+  .video-btn h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+</style>
+
+<h3 class="mb-4">CHILDHOOD CLASSICS</h3>Videos from childhood.
+<div class="starter-grid">
+
+              <button class="video-btn" data-video-id="QNjTkcFaUpg">
+    <img src="https://img.youtube.com/vi/QNjTkcFaUpg/hqdefault.jpg" alt="Shadow Ball">
+    <div><h5>Shadow Ball</h5></div>
+  </button>
+   
+                 <button class="video-btn" data-video-id="CTcu6-30Rdo">
+    <img src="https://img.youtube.com/vi/CTcu6-30Rdo/hqdefault.jpg" alt="Different Tastes in Music">
+    <div><h5>Different Tastes in Music</h5></div>
+  </button>
+  
+            <button class="video-btn" data-video-id="m-h-wAvdQvQ">
+    <img src="https://img.youtube.com/vi/m-h-wAvdQvQ/hqdefault.jpg" alt="Sam Ornella's Guide to Extreme Birdwatching">
+    <div><h5>Sam Ornella's Guide to Extreme Birdwatching</h5></div>
+  </button>
+  
+                    <button class="video-btn" data-video-id="b0YPES1htNg">
+    <img src="https://img.youtube.com/vi/b0YPES1htNg/hqdefault.jpg" alt="The Greatest Swan Sighting of All Time ">
+    <div><h5>The Greatest Swan Sighting of All Time</h5></div>
+  </button>
+  
+          <button class="video-btn" data-video-id="FFM08h7KJOA">
+    <img src="https://img.youtube.com/vi/FFM08h7KJOA/hqdefault.jpg" alt="Sorry Bill!">
+    <div><h5>Sorry Bill!</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="4UK0oM8BLeU">
+    <img src="https://img.youtube.com/vi/4UK0oM8BLeU/hqdefault.jpg" alt="Visual Puns">
+    <div><h5>Visual Puns</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="FyPbaQTVAeY">
+    <img src="https://img.youtube.com/vi/FyPbaQTVAeY/hqdefault.jpg" alt="A Walk with the Bluejays">
+    <div><h5>A Walk with the Bluejays</h5></div>
+  </button>
+  
+            <button class="video-btn" data-video-id="maUPuCW4Ssg">
+    <img src="https://img.youtube.com/vi/maUPuCW4Ssg/hqdefault.jpg" alt="Brawl Delays">
+    <div><h5>Brawl Delays</h5></div>
+  </button>
+  
+            <button class="video-btn" data-video-id="owfJWXgx8sc">
+    <img src="https://img.youtube.com/vi/owfJWXgx8sc/hqdefault.jpg" alt="How to be a Voice Actor">
+    <div><h5>How to be a Voice Actor</h5></div>
+  </button>
+  
+          <button class="video-btn" data-video-id="udvLE-y3uHc">
+    <img src="https://img.youtube.com/vi/udvLE-y3uHc/hqdefault.jpg" alt="Rickroll'd iPhones">
+    <div><h5>Rickroll'd iPhones</h5></div>
+  </button>
+  
+        <button class="video-btn" data-video-id="WYDYRqHpmU4">
+    <img src="https://img.youtube.com/vi/WYDYRqHpmU4/hqdefault.jpg" alt="Sundial - From Shazammo!">
+    <div><h5>Sundial - From Shazammo!</h5></div>
+  </button>
+
+</div>
+
