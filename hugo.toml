@@ -1,4 +1,4 @@
-
+baseURL = "https://www.shippiddge.com/"
 languageCode = 'en-us'
 title = 'Shippiddge.com'
 theme = "github-style"
