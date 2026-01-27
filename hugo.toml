@@ -1,6 +1,6 @@
 
 languageCode = 'en-us'
-title = 'Shippiddge dot com'
+title = 'Shippiddge.com'
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -8,7 +8,7 @@ pluralizeListTitles = false
 
 
 [params]
-  description = "Welcome to Shippiddge.com!"
+  description = "Starter Squad, Smashtasm, Sonic Logic, and more.  Picking at your nostalgia since 2006."
   email = "contact@shippiddge.com"
   favicon = "/images/shipp112.png"
   avatar = "/images/shipp_logo_400.png"
