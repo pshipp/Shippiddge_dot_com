@@ -1,7 +1,7 @@
 <script>
-  // Set dark mode as default for new visitors
-  if (!localStorage.getItem('theme')) {
-    localStorage.setItem('theme', 'dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
+  // Force dark mode permanently
+  localStorage.setItem('theme', 'dark');
+  localStorage.setItem('data-color-mode', 'dark');
+  document.documentElement.setAttribute('data-theme', 'dark');
+  document.documentElement.setAttribute('data-color-mode', 'dark');
 </script>
