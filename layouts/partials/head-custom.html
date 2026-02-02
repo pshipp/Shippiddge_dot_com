@@ -1,7 +1,18 @@
 <script>
-  // Force dark mode permanently
-  localStorage.setItem('theme', 'dark');
-  localStorage.setItem('data-color-mode', 'dark');
-  document.documentElement.setAttribute('data-theme', 'dark');
-  document.documentElement.setAttribute('data-color-mode', 'dark');
+  // Force dark mode permanently - run before anything else
+  (function() {
+    // Set both storage keys the theme might use
+    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('data-color-mode', 'dark');
+    
+    // Set attributes immediately
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-color-mode', 'dark');
+    
+    // Prevent the theme switcher function from working
+    window.switchTheme = function() { 
+      // Do nothing - theme switching disabled
+      return false; 
+    };
+  })();
 </script>
